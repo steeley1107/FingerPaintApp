@@ -42,14 +42,16 @@
     CGPoint position = [sender locationInView:self.drawingView];
     
     if (sender.state == UIGestureRecognizerStateBegan) {
-        self.currentLine = [[Line alloc] initWithPath: [UIBezierPath new] andColor:self.color];
+        self.currentLine = [[Line alloc] initWithPath: [UIBezierPath new] andColor:[UIColor grayColor]];
         [self.lineArray addObject:self.currentLine];
         [self.currentLine.path moveToPoint:position];
     } else if (sender.state == UIGestureRecognizerStateChanged) {
         [self.currentLine.path addLineToPoint:position];
+        self.currentLine.color = self.color;
+        
     }
     else if (sender.state == UIGestureRecognizerStateEnded) {
-        
+       
     }
     
     [self.drawingView setNeedsDisplay];
@@ -82,10 +84,13 @@
         case 4:
             self.color = [UIColor redColor];
             break;
-            
         default:
             break;
     }
+}
+- (IBAction)clearScreen:(id)sender {
+    [self.lineArray removeAllObjects];
+    [self.drawingView setNeedsDisplay];
 }
 
 @end

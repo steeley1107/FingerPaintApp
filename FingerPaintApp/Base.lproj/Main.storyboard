@@ -19,8 +19,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XY7-6k-w5X" customClass="DrawingView">
                                 <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWW-4B-SRe">
+                                        <rect key="frame" x="282" y="0.0" width="36" height="30"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SHF-Mz-L0a"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="qWW-4B-SRe" firstAttribute="centerX" secondItem="XY7-6k-w5X" secondAttribute="centerX" id="Gbr-MG-ICU"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="IDJ-l4-BQq" appends="YES" id="DD2-Q4-5FA"/>
                                 </connections>
@@ -47,6 +59,7 @@
                         <constraints>
                             <constraint firstItem="XY7-6k-w5X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2Eq-S7-GD1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XY7-6k-w5X" secondAttribute="bottom" constant="49" id="F1D-YY-Xv8"/>
+                            <constraint firstItem="qWW-4B-SRe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Pdb-Jh-W5G"/>
                             <constraint firstItem="XY7-6k-w5X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aeL-iC-hN5"/>
                             <constraint firstAttribute="trailing" secondItem="XY7-6k-w5X" secondAttribute="trailing" id="cat-zs-JDX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yq9-M1-7cZ" secondAttribute="bottom" constant="13" id="hke-uZ-XBj"/>
