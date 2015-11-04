@@ -11,25 +11,15 @@
 
 @implementation DrawingView
 
-
 -(void)drawRect:(CGRect)rect{
-    
-    
-    //[[UIColor orangeColor] setStroke];
-    
     // ask our delegate for data
     NSArray *lines = [self.delegate drawLines];
     
     for (Line *currentLine in lines) {
         
-        [currentLine.path stroke];
         [currentLine.color setStroke];
-        
+        [currentLine.path stroke];
     }
-    
 }
-
-
-
 
 @end

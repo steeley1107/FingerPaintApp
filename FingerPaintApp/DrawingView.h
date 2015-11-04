@@ -14,12 +14,7 @@
 - (NSArray *)drawLines;
 @end
 
-
-
 @interface DrawingView : UIView
-//@property (nonatomic) CGPoint startPosition;
-//@property (nonatomic) CGPoint nextPosition;
-//@property (nonatomic) CGPoint endPosition;
 
 @property (nonatomic,strong) id <DrawingDelegate> delegate;
 

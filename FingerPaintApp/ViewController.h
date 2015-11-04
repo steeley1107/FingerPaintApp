@@ -11,8 +11,6 @@
 
 @interface ViewController : UIViewController <DrawingDelegate>
 
-
-
 @property (nonatomic,strong) id <DrawingDelegate> delegate;
 
 
